@@ -18,7 +18,14 @@ public class App {
         Cozinha cozinha = new Cozinha();
         cozinha.prepararPedido(pedido);
 
-        Cliente cliente = new Cliente("João");
-        cliente.fazerPedido(cozinha);
+        // Agora, crie um cliente com a referência para a cozinha
+        Cliente cliente = new Cliente("João", cozinha);
+
+        // Faça o pedido usando a instância do cliente
+        cliente.fazerPedido();
+    }
+
+    public static int soma(int a, int b) {
+        return a + b;
     }
 }
